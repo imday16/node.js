@@ -1,0 +1,48 @@
+{
+    "name": "web",
+    "version": "1.0.1",
+    "description": "siteweb",
+    "main": "server.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node server.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": " "
+    },
+    "keywords": [
+      "ssl",
+      "tls",
+      "https",
+      "rsa",
+      "pem",
+      "example",
+      "demo",
+      "test",
+      "openssl",
+      "crt",
+      "p12",
+      "csr",
+      "certificate",
+      "certs",
+      "cert",
+      "key",
+      "private",
+      "public"
+    ],
+    "author": "Imad",
+    "license": "Apache2",
+    "bugs": {
+      "url":""
+    },
+    "homepage": "",
+    "dependencies": {
+      "bluebird": "^2.9.3",
+      "check-ip-address": "^1.1.1",
+      "express": "^4.17.1",
+      "request": "^2.51.0",
+      "ssl-root-cas": "^1.1.10"
+    }
+  }
+  
