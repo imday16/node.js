@@ -21,6 +21,7 @@ var caCertificatChemin = path.join(__dirname, 'certs','ca');
 // La methode fs.readfilesSync() est utilisé pour lires les fichiers et renvoyer son contenu 
 // En l'occuence nous voulons lires les clées contenu dans le repertoire ca et server
 
+
     options={
      
         key: fs.readfilesSync(path.join(certificatChemin, 'mon-server.key.pem'))

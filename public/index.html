@@ -168,9 +168,11 @@
 
             </code></pre>
             <script>
+
                 document.body.innerHTML = document.body.innerHTML
                 .replace(/{{(\s)?host(\s+)?}}/,location.hostname)
                 .replace(/{{(\s)?host(\s+)?}}/,location.hostname.replace(/.*:/, ''));
+                
             </script>
         </body>
 </html>
