@@ -1,21 +1,22 @@
  #! /usr/bin/env node // Choix environement
+'use strict';
 
 //import des modules https,path,port,fs
 //Création des variables nonSécuriser,option,server
 //Création des variables des certificats dans le dossier "ca" et "server" contenant les clées du serveur
 //process.argv est un tableau qui va contenir des arguments en l'occurence l'argument des ports
-var https = require ('https');
-var http = require ('http');
-var path = require ('path'); // atteindre des dossier ou chemin 
-var port = process.argv[2] || 3000   // besoin définir un port (non securisé)
-var securitePort = process.argv[3] || 4000 // définir un port sécurisé
-var fs = require ('fs');  //
-var checkip = require ('checkip');  // 
-var server             // creation de server 
-var nonSecuriser 
-var options 
-var certificatChemin = path.join(__dirname, 'certs','server');
-var caCertificatChemin = path.join(__dirname, 'certs','ca');
+const https = require ('https');
+const http = require ('http');
+const path = require ('path'); // atteindre des dossier ou chemin 
+const port = process.argv[2] || 4027   // besoin définir un port (non securisé)
+const securitePort = process.argv[3] || 8888 // définir un port sécurisé
+const fs = require ('fs');  //
+const checkip = require ('check-ip-address');  // 
+const server             // creation de server 
+const nonSecuriser 
+const options 
+const certificatChemin = path.join(__dirname, 'certs','server');
+const caCertificatChemin = path.join(__dirname, 'certs','ca');
 
 
 // Methode qui va nous permettre qui recup/ les clées
@@ -47,10 +48,10 @@ checkip.getExternalIp().then(function(ip) {
         server.on('request',app);
         server.listen(port, function() {     
             port = server.address().port;
-                console.log('access address https://nextformation.technique.fr:8000');
-                console.log('access address https://127.0.0.1:3000');
+                console.log('access address https://nextformation.technique.fr'+ port);
+                console.log('access address https://127.0.0.1:8888'+ 'port');
             if (ip) {
-                console.log('access address http://127.0.0.1:3000');
+                console.log('access address http://127.0.0.1:4027');
             } 
         });
     }
